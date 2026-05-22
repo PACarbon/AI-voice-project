@@ -1,0 +1,31 @@
+        haneWIN NFS Server Software 1.2
+
+        Lizenzbedingungen
+
+Die haneWIN NFS Server Software, im nachfolgenden Software genannt, ist Shareware. Lesen Sie bitte die Lizenzvereinbarung sorgfältig, bevor Sie die Software installieren. Durch das Installieren der Software stimmen Sie den Bedingungen dieser Lizenzvereinbarung zu.
+
+Nutzungsrecht
+Sie können Sie die Software bis zu 30 Kalendertage nach dem Datum der ersten Installation testen, um zu entscheiden, ob Sie eine Lizenz erwerben wollen. Zur weiteren, unbegrenzten Nutzung der Software ist die Entrichtung einer Lizenzgebühr (Registrierung) erforderlich. Mit der Registrierung erhalten Sie ein zeitlich nicht begrenztes, nicht ausschliessliches Nutzungsrecht  die Software auf einem Einzelcomputer einzusetzen. 
+Die Lizensierung ist unabhängig von der Anzahl der Rechner im LAN, die auf den NFS Server zugreifen können.
+ 
+Einzelheiten und Bestelladresse zur Registrierung finden Sie in der Datei bestell.txt 
+
+Copyright
+Die Software und die Dokumentation sind urheberrechtlich geschützt. 
+Copyright (c) 2002-2023 Herbert Hanewinkel, Neuried. Alle Rechte vorbehalten. 
+Die Software darf weder zurückentwickelt, entschlüsselt, extrahiert oder irgendwie anderweitig verändert werden.
+ 
+Haftungsausschluß
+Für die Funktionsfähigkeit der Software kann keinerlei Garantie übernommen werden. 
+Für Verlust oder Beschädigung von Daten oder wirtschaftliche Nachteile, die durch den Einsatz dieser Software entstehen, werden von Lizenzgeber und Autor keine Haftung übernommen. 
+Jegliche Gewährleistungsansprüche und Schadensersatzansprüche gegenüber dem Lizenzgeber und dem Autor der Software sind ausgeschlossen, soweit nicht z.B. wegen Vorsatzes zwingend gehaftet wird. 
+
+Haftungsbegrenzung
+Der Benutzer verwendet die Software ausschließlich auf eigenes Risiko. Lizenzgeber und Autor haften maximal bis zur Höhe der gezahlten Lizenzgebühr für mögliche Schäden, selbst wenn sie über die Möglichkeit solcher Schädigungen informiert worden sind. Diese Beschränkung gilt auch für Ansprüche von Dritten.
+
+Beendigung
+Die Lizenz erlischt automatisch, wenn Sie den hier beschriebenen Lizenzbestimmungen nicht zustimmen oder gegen die Lizenzbestimmungen verstoßen. Bei Beendigung sind Sie verpflichtet, alle Kopien der Software zu löschen bzw. vernichten.
+
+Weitergabe als Shareware
+Die unregistrierte Software darf ausschliesslich in der Originalform kopiert und weiter verbreitet werden. Es dürfen keine Dateien aus dem Archiv entfernt, modifiziert oder hinzugefügt werden. Für die unregistrierte Software darf kein Entgelt erhoben werden, ausser einer Gebühr für das Distributionsmedium selbst. Jegliche Weitergabe als Bestandteil oder zusammen mit anderer zum Verkauf bestimmter Softwarepakete bedarf der Zustimmung des Autors.
+

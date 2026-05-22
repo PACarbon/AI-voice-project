@@ -1,0 +1,30 @@
+        haneWIN NFS Server 1.2
+
+        Binary Code License
+
+The haneWIN NFS Server Software is Shareware. Please read the License carefully before installing the Software. By installing the Software you agree to the terms and conditions of this License.
+
+1.Copyright
+The software and the documentation are copyrighted
+Copyright (c) 2002-2023 by Herbert Hanewinkel, Neuried All Rights Reserved.
+You are prohibited from defeating shareware limits or using an unauthorized password, modify, decompile, disassemble, decrypt, extract, or otherwise reverse engineer the software.
+
+2. License grant
+You may test the software for 30 days without any obligations. After this period you may only continue to use the software after payment of a license fee (registration). The registration grants you a non-exclusive right-to-use of the NFS Server Software on one computer.
+The license fee does not depend on the number of clients accessing the NFS Server software.
+
+Please read the file order.txt for details on how to register the software.
+ 
+3. Shareware
+The unregistered shareware version of the software may be freely copied and distributed under the condition that the software must be copied or distributed in the original and unmodified form with no files added, modified, or removed. The distribution must be free of charge, except charging for the distribution media itself. 
+
+4. Disclaimer of warranty
+The Software is provided AS IS, without a warranty of any kind and as such the author shall NOT be held liable for any loss of data, down time, loss of revenue or any other direct or indirect damage or claims caused by this program. ALL EXPRESS OR IMPLIED REPRESENTATIONS AND WARRANTIES, INCLUDING ANY IMPLIED WARRANTY OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NON-INFRINGEMENT, ARE HEREBY EXCLUDED.
+
+5. Severability
+The user must assume the entire risk of using the program. IN NO EVENT WILL THE AUTHOR BE LIABLE FOR ANY DAMAGES IN EXCESS OF THE AMOUNT RECEIVED FROM YOU FOR A LICENSE TO USE THE SOFTWARE.
+
+6. Termination
+The License will terminate automatically if you fail to comply with the limitations described herein. On termination, you must destroy all copies of the Software.
+
+

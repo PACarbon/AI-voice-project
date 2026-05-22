@@ -1,0 +1,171 @@
+2024-06-01 17:41:34 Unregistered version, for up to 30 days evaluation only
+2024-06-01 17:41:34 nfsd   Chinese (Simplified)_China.936
+2024-06-01 17:41:34 nfsd   file handle cache size 8
+2024-06-01 17:41:34 nfsd   maximum data size 8192
+2024-06-01 17:41:34 nfsd   file id mode enabled
+2024-06-01 17:41:34 nfsd   save attr on NTFS enabled
+2024-06-01 17:41:34 nfsd   symbolic links enabled 
+2024-06-01 17:41:34 nfsd   NTFS hard links supported
+
+------ Exported file systems ------
+C:\Users\moon\Documents\share -name:share -lowercase -exec -alldirs
+-----------------------------------
+
+2024-06-01 17:41:34 pmapd ready on port 111
+2024-06-01 17:41:34 mountd started on 1058
+2024-06-01 17:41:34 nfsd   started on 2049, threads udp 4 tcp 2/c
+
+------ Exported file systems ------
+C:\Users\moon\Documents\share -name:share -lowercase -exec -alldirs -public
+-----------------------------------
+
+2024-06-01 17:43:11 Unregistered version, for up to 30 days evaluation only
+2024-06-01 17:43:11 nfsd   Chinese (Simplified)_China.936
+2024-06-01 17:43:11 nfsd   file handle cache size 8
+2024-06-01 17:43:11 nfsd   maximum data size 8192
+2024-06-01 17:43:11 nfsd   file id mode enabled
+2024-06-01 17:43:11 nfsd   save attr on NTFS enabled
+2024-06-01 17:43:11 nfsd   symbolic links enabled 
+2024-06-01 17:43:11 nfsd   NTFS hard links supported
+
+------ Exported file systems ------
+C:\Users\moon\Documents\share -name:share -lowercase -exec -alldirs -public
+-----------------------------------
+
+2024-06-01 17:43:11 pmapd ready on port 111
+2024-06-01 17:43:11 mountd started on 1058
+2024-06-01 17:43:11 nfsd   started on 2049, threads udp 4 tcp 2/c
+2024-06-01 17:51:45 Unregistered version, for up to 30 days evaluation only
+2024-06-01 17:51:45 nfsd   Chinese (Simplified)_China.936
+2024-06-01 17:51:45 nfsd   file handle cache size 8
+2024-06-01 17:51:45 nfsd   maximum data size 8192
+2024-06-01 17:51:45 nfsd   client root mapped to root
+2024-06-01 17:51:45 nfsd   file id mode enabled
+2024-06-01 17:51:45 nfsd   save attr on NTFS enabled
+2024-06-01 17:51:45 nfsd   symbolic links enabled 
+2024-06-01 17:51:45 nfsd   NTFS hard links supported
+
+------ Exported file systems ------
+C:\Users\moon\Documents\share -name:share -lowercase -exec -alldirs -public
+-----------------------------------
+
+2024-06-01 17:51:45 pmapd ready on port 111
+2024-06-01 17:51:45 mountd started on 1058
+2024-06-01 17:51:45 nfsd   started on 2049, threads udp 4 tcp 2/c
+2024-06-01 17:52:47 nfsd   Chinese (Simplified)_China.936
+2024-06-01 17:52:47 nfsd   file handle cache size 8
+2024-06-01 17:52:47 nfsd   maximum data size 8192
+2024-06-01 17:52:47 nfsd   client root mapped to root
+2024-06-01 17:52:47 nfsd   file id mode enabled
+2024-06-01 17:52:47 nfsd   save attr on NTFS enabled
+2024-06-01 17:52:47 nfsd   symbolic links enabled 
+2024-06-01 17:52:47 nfsd   NTFS hard links supported
+
+------ Exported file systems ------
+C:\Users\moon\Documents\share -name:share -lowercase -exec -alldirs -public
+-----------------------------------
+
+2024-06-01 17:52:47 pmapd ready on port 111
+2024-06-01 17:52:47 mountd started on 1058
+2024-06-01 17:52:47 nfsd   started on 2049, threads udp 4 tcp 2/c
+
+------ Exported file systems ------
+C:\Users\moon\Documents\share -name:share -lowercase -exec -alldirs -public
+C:\Users\moon\Desktop\XAPH0527\05 -name:05 -lowercase -exec -alldirs -public
+-----------------------------------
+
+
+------ Exported file systems ------
+C:\Users\moon\Documents\share -name:share -lowercase -exec -alldirs -public
+C:\Users\moon\Desktop\XAPH0527\05 -name:05 -exec -alldirs
+-----------------------------------
+
+
+------ Exported file systems ------
+C:\Users\moon\Documents\share -name:share -lowercase -exec -alldirs -public
+C:\Users\moon\Desktop\XAPH0527\05 -name:05 -readonly -lowercase -exec -alldirs -public
+-----------------------------------
+
+2024-06-01 17:58:16 nfsd   Chinese (Simplified)_China.936
+2024-06-01 17:58:16 nfsd   file handle cache size 8
+2024-06-01 17:58:16 nfsd   maximum data size 8192
+2024-06-01 17:58:16 nfsd   client root mapped to root
+2024-06-01 17:58:16 nfsd   file id mode enabled
+2024-06-01 17:58:16 nfsd   save attr on NTFS enabled
+2024-06-01 17:58:16 nfsd   symbolic links enabled 
+2024-06-01 17:58:16 nfsd   NTFS hard links supported
+
+------ Exported file systems ------
+C:\Users\moon\Documents\share -name:share -lowercase -exec -alldirs -public
+C:\Users\moon\Desktop\XAPH0527\05 -name:05 -readonly -lowercase -exec -alldirs -public
+-----------------------------------
+
+2024-06-01 17:58:16 pmapd ready on port 111
+2024-06-01 17:58:16 mountd started on 1058
+2024-06-01 17:58:16 nfsd   started on 2049, threads udp 4 tcp 2/c
+
+------ Exported file systems ------
+C:\Users\moon\Documents\share -name:share -lowercase -exec -alldirs -public
+C:\Users\moon\Desktop\XAPH0527\05 -exec -alldirs
+-----------------------------------
+
+
+------ Exported file systems ------
+C:\Users\moon\Documents\share -name:share -lowercase -exec -alldirs -public
+-----------------------------------
+
+2024-06-01 18:01:06 nfsd   Chinese (Simplified)_China.936
+2024-06-01 18:01:06 nfsd   file handle cache size 8
+2024-06-01 18:01:06 nfsd   maximum data size 81920
+2024-06-01 18:01:06 nfsd   client root mapped to root
+2024-06-01 18:01:06 nfsd   file id mode enabled
+2024-06-01 18:01:06 nfsd   save attr on NTFS enabled
+2024-06-01 18:01:06 nfsd   symbolic links enabled 
+2024-06-01 18:01:06 nfsd   NTFS hard links supported
+
+------ Exported file systems ------
+C:\Users\moon\Documents\share -name:share -lowercase -exec -alldirs -public
+-----------------------------------
+
+2024-06-01 18:01:06 pmapd ready on port 111
+2024-06-01 18:01:06 mountd started on 1058
+2024-06-01 18:01:06 nfsd   started on 2049, threads udp 4 tcp 2/c
+2024-06-01 18:01:06 nlmd   started on 4045
+2024-06-01 18:03:51 mount3 192.168.1.101 c:\Users\moon\Documents\share
+2024-06-01 18:04:36 mount3 192.168.1.101 c:\Users\moon\Documents\share
+2024-06-01 19:08:34 mount3 192.168.1.101 c:\Users\moon\Documents\share
+2024-06-01 19:16:55 mount3 192.168.1.101 c:\Users\moon\Documents\share
+2024-06-03 15:29:43 nfsd   Chinese (Simplified)_China.936
+2024-06-03 15:29:43 nfsd   file handle cache size 8
+2024-06-03 15:29:43 nfsd   maximum data size 81920
+2024-06-03 15:29:43 nfsd   client root mapped to root
+2024-06-03 15:29:43 nfsd   file id mode enabled
+2024-06-03 15:29:43 nfsd   save attr on NTFS enabled
+2024-06-03 15:29:43 nfsd   symbolic links enabled 
+2024-06-03 15:29:43 nfsd   NTFS hard links supported
+
+------ Exported file systems ------
+C:\Users\moon\Documents\share -name:share -lowercase -exec -alldirs -public
+-----------------------------------
+
+2024-06-03 15:29:43 pmapd ready on port 111
+2024-06-03 15:29:43 mountd started on 1058
+2024-06-03 15:29:43 nfsd   started on 2049, threads udp 4 tcp 2/c
+2024-06-03 15:29:43 nlmd   started on 4045
+2024-06-03 20:04:39 nfsd   Chinese (Simplified)_China.936
+2024-06-03 20:04:39 nfsd   file handle cache size 8
+2024-06-03 20:04:39 nfsd   maximum data size 81920
+2024-06-03 20:04:39 nfsd   client root mapped to root
+2024-06-03 20:04:39 nfsd   file id mode enabled
+2024-06-03 20:04:39 nfsd   save attr on NTFS enabled
+2024-06-03 20:04:39 nfsd   symbolic links enabled 
+2024-06-03 20:04:39 nfsd   NTFS hard links supported
+
+------ Exported file systems ------
+C:\Users\moon\Documents\share -name:share -lowercase -exec -alldirs -public
+-----------------------------------
+
+2024-06-03 20:04:39 pmapd ready on port 111
+2024-06-03 20:04:39 mountd started on 1058
+2024-06-03 20:04:39 nfsd   started on 2049, threads udp 4 tcp 2/c
+2024-06-03 20:04:39 nlmd   started on 4045

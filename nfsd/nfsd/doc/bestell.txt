@@ -1,0 +1,40 @@
+        haneWIN NFS Server 1.2
+
+        Registrierung
+
+Diese Software wird als sogenannte "Shareware" verbreitet.
+Sie können damit die Software bis zu 30 Tage unverbindlich testen. Zur unbegrenzten 
+Nutzung der Software ist die Entrichtung einer Lizenzgebühr (Registrierung) erforderlich. 
+Wenn Sie die Software nach der Testphase weiterbenutzen, ohne eine Lizenz zu erwerben, 
+verletzen Sie das Copyright. Mit der Registrierung erhalten Sie ein zeitlich nicht 
+begrenztes, nicht ausschließliches Nutzungsrecht für die Software. Sie erhalten ausserdem 
+das Recht, OHNE weitere Kosten bis zur nächsten Hauptversion auf die jeweils aktuelle 
+Version 1.x der haneWIN NFS Server Software zu wechseln.
+Die Lizenzgebühr ist unabhängig von der Anzahl der Rechner im LAN, die auf den NFS Server 
+zugreifen können.
+Eine Registrierung gilt für die Nutzung der NFS Server Software auf einem Rechner (PC). 
+
+Bitte verwenden Sie zur Registrierung unseren Online-Shop unter http://www.hanewin.de
+Dort finden Sie auch die aktuellen Preise für eine Lizenz.
+
+Die Bezahlung kann über
+
+1. Paypal
+2. Banküberweisung erfolgen.
+
+Eine Lieferung gegen offene Rechnung bieten wir bei öffentlichen Einrichtungen/Grosskonzernen
+bei offizieller Bestellung an.
+
+
+Bestellungen richten Sie bitte an: 
+
+haneWIN Software
+Dr. Herbert Hanewinkel 
+Ammerseestr. 30 
+82061 Neuried, Deutschland 
+Fax:   +49 89 74575643 
+email: mail@hanewin.net
+
+Vergessen Sie bitte nicht bei Banküberweisung Ihre Adresse anzugeben, senden Sie am besten zusätzlich ein Fax, einen Brief oder eine e-mail. Die Zuteilung des Lizenzschluessels erfolgt nach Eingang der Zahlung. 
+
+Wir erstellen auf Ihre Bestellung hin einen Lizenzschlüssel mit den von Ihnen angegebenen Daten. Dieser Lizenzschlüssel DARF NICHT weitergegeben werden, da er Ihre persönliche Nutzungsberechtigung für die Software darstellt. 

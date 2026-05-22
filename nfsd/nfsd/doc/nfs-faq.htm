@@ -1,0 +1,176 @@
+
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="keywords" content="NFS">
+   <title>haneWIN NFS Server FAQ</title>
+
+  <style type="text/css">
+h3 {text-align:center;}
+p, dl {text-align:justify;}
+body {background-color:#ffffff;width: 960px; margin:0 auto;}
+</style>
+</head>
+
+<body bgcolor="ffffff">
+
+<h3><font color="#4040ee"><i>
+haneWIN NFS Server FAQ
+</i></font></h3>
+                                    
+<dl>
+<dt><hr><p><i>
+The NFS server no longer works using version 1.2.30 and higher.
+
+</i></p></dt>
+<dd><p>
+Starting with version 1.2.30 the Windows file-id is used on NTFS volumes as
+inode number by default. It reduces the overhead of managing inode numbers
+of large volumes. The problem: file-id's are 64 bit in size, inode numbers
+created by the server itself 32 bit and a number of clients have problems
+with 64 bit inode numbers.
+<br>
+You can disable the use of file-id's by unchecking the option "Use file-id as inode..."
+</p></dd>
+
+<dt><hr><p><i>
+Everything is greyed out on the Control Panel tabs.
+</i></p></dt>
+<dd><p>
+On Windows 7 and higer versions you have to start the Control panel applet of
+the NFS server with Administrator rights to configure the NFS server service.
+<br>Open context menu and select "Run as Administrator" to start the applet.
+</p></dd>
+
+<dt><hr><p><i>
+My client can not write to any share.
+</i></p></dt>
+<dd><p>
+There are boxes with unix that have only user root, e.g. KODI/LIBREELEC
+on raspberry pi.
+The server maps a client user root to NOBODY by default resulting in
+no write permission on the server.
+<br>Add option -maproot:0 to exports entries for these clients.
+</p></dd>
+
+<dt><hr><p><i>
+Ein NFS-Share zeigt auf einen Ordner in einer 517GB großen Partition.
+Damit funktioniert der NFS-Server nicht. Mit einer 10GB großen
+Partition haben wir kein Problem.<br>
+Gibt es eine Gr&ouml;ssenbeschr&auml;nkung bei dem NFS-Server?
+</i></p></dt>
+<dd><p>
+nein, es gibt <b>keine</b> Beschr&auml;nkung in der Gr&ouml;sse der verwendeten
+Platte oder Partition.</p>
+<p align=justify>
+Der Fehler lag in diesem Fall bei der Sicherheitspolitik des Windowsservers.
+Bei diesem war die Sicherheitsstufe zu hoch eingestellt.
+Die Einstellungsänderung<br>
+<tt>"HighSecurityDomainController" --&gt; "StandardDomainController"</tt><br>
+hat dafür gesorgt, das es jetzt funktioniert, d.h. shares auf der 517 GB grossen 
+Partition lassen sich mounten und auch Dateien größer 2 GB dorthin kopieren.
+</p></dd>
+
+<dt><hr><p><i>
+Copying a big file (2.5 GB) from client to server I got the message: 
+"file size limit exceeded" (at 2GB)
+<br>
+Is there a 2GB limit with nfs?
+</i></p></dt>
+<dd><p>
+NFS-2 uses a 32 Bit value for the file offset on read/write.
+2^31 (because of signed value) gives an addressable limit of 2 GB.
+<br>
+NFS-3 uses a 64 Bit value for the offset.
+<br>
+The haneWIN NFS Server implements NFS-3 protocol and supports 64-Bit offsets.
+Check the nfs mount command if NFS-3 is available on your client.
+</p></dd>
+
+<dt><hr><p><i>
+Der NFS Server ist als Dienst eingetragen startet aber nicht.
+Welche Ursache kann das haben?
+</i></p></dt>
+<dd><p>
+Entweder ist kein PortMap Dienst installiert und aktiv
+oder die "exports" Datei ist fehlerhaft.
+<br>
+Die Inode-Tabelle sollte ggf. beim Neustart zurückgesetzt werden (unter SERVER einzustellen)
+</p></dd>
+
+<dt><hr><p><i>
+Der NFS Server hat die IP-Adresse 192.168.0.3 und soll die
+Verzeichnisse e:\mp3 und e:\bilder exportieren.
+Ich m&ouml;chte ausschliesslich von 192.168.0.1 auf den NFS Server zugreifen:
+<br>
+<tt>
+mount -t nfs 192.168.0.3:/e/mp3 /mp3
+<br> 
+mount -t nfs 192.168.0.3:/e/bilder /bilder
+</tt>
+<br>
+Wie muss die "exports" Datei ausehen?
+</i></p></dt>
+<dd>
+<pre>
+exports:
+<tt>
+e:\bilder 192.168.0.1
+e:\mp3    192.168.0.1
+</tt>
+</pre></dd>
+
+<dt><hr><p><i>
+Ich m&ouml;chte auf dem gemounteten Windowsverzeichnis ein Verzeichnis mit dem
+Namen prn.neu anlegen. Obwohl kein Verzeichnis mit diesem Namen existiert kommt
+dabei die Fehlermeldung : "Es ist bereits ein Objekt vorhanden, welches kein 
+Dateiverzeichnis ist".
+</i></p></dt>
+<dd><p>
+"prn" ist wie "aux", "con", "nul" oder "com1" - "com9" ein Pseudo Device unter Windows.
+<br>
+Ein Verzeichnis oder eine Datei (die Dateierweiterung wird ignoriert) kann so
+nicht heissen.
+</p></dd>
+
+<dt>
+<hr>
+<p>
+<i>
+	Der mountd l&auml;uft auf Port 1058. Da dieser Wert im dyn. Portbereich liegt
+	kann
+	das Port einem anderen Prozess zugeteilt worden sein.
+	<br>
+	Wie l&auml;sst sich das verhindern?
+</i>
+</p>
+</dt>
+<dd>
+<p>
+Mit einem Registrierungseintrag unter:
+<br>
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters]
+<br>
+"ReservedPorts"="1058-1058"
+<br>
+<p>
+siehe http://support.microsoft.com/?scid=kb%3Ben-us%3B812873&x=9&y=10
+</p>
+"This article describes how to reserve a range of ephemeral ports on a computer
+that is running Microsoft Windows Server 2003, Microsoft Windows XP Professional
+or Microsoft Windows 2000. In some situations, you may want to reserve a range
+of ports so that a program or process that requests a random port will not be 
+assigned a port that is in the reserved range. When you reserve a range of ports,
+only a program or process that specifically requests a port that is in the
+reserved range can use the port...."
+</p>
+</dd>
+</dl>
+
+<table width=100%><tr>
+<td align=left><font size=-1><i>www.hanewin.de</i></font></td>
+<td align=right><font size=-1><i>
+31.March.2019</i></font></td>
+</tr></table>
+</body>
+</html>

@@ -326,7 +326,7 @@ void myiat(char * rec_result)
 	*/
     const char* session_begin_params	=	"sub = iat, domain = iat, language = zh_cn, accent = mandarin, sample_rate = 16000, result_type = plain, result_encoding = utf8";
 
-	run_iat("wav/iflytek02.wav", session_begin_params, rec_result);
+	run_iat("2.wav", session_begin_params, rec_result);
 }
 
 void mytts(const char *text)

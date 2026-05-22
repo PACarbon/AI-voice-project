@@ -1,0 +1,49 @@
+2026-05-08 16:26:17 nfsd   Chinese (Simplified)_China.936
+2026-05-08 16:26:17 nfsd   file handle cache size 8
+2026-05-08 16:26:17 nfsd   maximum data size 81920
+2026-05-08 16:26:17 nfsd   client root mapped to root
+2026-05-08 16:26:17 nfsd   file id mode enabled
+2026-05-08 16:26:17 nfsd   save attr on NTFS enabled
+2026-05-08 16:26:17 nfsd   symbolic links enabled 
+2026-05-08 16:26:17 nfsd   NTFS hard links supported
+
+------ Exported file systems ------
+C:\Users\moon\Documents\share -name:share -lowercase -exec -alldirs -public
+-----------------------------------
+
+2026-05-08 16:26:17 pmapd ready on port 111
+2026-05-08 16:26:17 mountd started on 1058
+2026-05-08 16:26:17 nfsd   started on 2049, threads udp 4 tcp 2/c
+2026-05-08 16:26:17 nlmd   started on 4045
+
+------ Exported file systems ------
+D:\ubuntu16.04\share -name:share -lowercase -exec -alldirs -public
+-----------------------------------
+
+2026-05-08 16:29:22 mount3 169.254.10.50 d:\ubuntu16.04\share
+2026-05-15 15:42:18 nfsd   Chinese (Simplified)_China.936
+2026-05-15 15:42:18 nfsd   file handle cache size 8
+2026-05-15 15:42:18 nfsd   maximum data size 81920
+2026-05-15 15:42:18 nfsd   client root mapped to root
+2026-05-15 15:42:18 nfsd   file id mode enabled
+2026-05-15 15:42:18 nfsd   save attr on NTFS enabled
+2026-05-15 15:42:18 nfsd   symbolic links enabled 
+2026-05-15 15:42:18 nfsd   NTFS hard links supported
+
+------ Exported file systems ------
+D:\ubuntu16.04\share -name:share -lowercase -exec -alldirs -public
+-----------------------------------
+
+2026-05-15 15:42:18 pmapd ready on port 111
+2026-05-15 15:42:18 mountd started on 1058
+2026-05-15 15:42:18 nfsd   started on 2049, threads udp 4 tcp 2/c
+2026-05-15 15:42:18 nlmd   started on 4045
+2026-05-15 15:43:04 mount3 169.254.10.50 d:\ubuntu16.04\share
+2026-05-15 15:59:09 mount3 169.254.10.50 d:\ubuntu16.04\share
+2026-05-15 15:59:44 mount3 169.254.10.50 d:\ubuntu16.04\share
+
+------ Exported file systems ------
+D:\ubuntu16.04\github -name:share -lowercase -exec -alldirs -public
+-----------------------------------
+
+2026-05-15 16:02:42 mount3 169.254.10.50 d:\ubuntu16.04\github

@@ -2,7 +2,6 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
-
 #define PORT 3000	  // 监听端口
 #define BUF_SIZE 1024 // 缓冲区大小
 
@@ -66,17 +65,13 @@ int main(int argc, char *argv[])
 	{
 		// 5. 服务器接收到客户端发来的数据
 		valread = read(new_socket, buffer, BUF_SIZE);
-
-		if (valread == 0)
-		{
-			return -1;
-		}
-		
 		printf("Client: %s\n", buffer);
 
-		my_iat();
-
-		// my_tts("把你想要转成音频的文字直接作为参数传入函数就好了");
+		if (buffer != "")
+		{
+			my_iat();
+			// my_tts("把你想要转成音频的文字直接作为参数传入函数就好了");
+		}
 
 		// 6. 服务器向客户端返回数据
 		write(new_socket, "收到", strlen("收到"));

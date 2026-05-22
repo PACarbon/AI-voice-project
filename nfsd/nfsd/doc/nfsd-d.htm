@@ -1,0 +1,629 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"><title>haneWIN NFS Server Dokumentation</title>
+      
+<style type="text/css">
+h2 {color:red; text-align:center;}
+h3 {text-align:center;}
+p, dl {text-align:justify;}
+body {background-color:#ffffff;width: 960px; margin:0 auto;}
+a:link    {color:#000000;text-decoration:none;}
+a:visited {color:#000000;text-decoration:none;}
+a:hover   {color:#0000FF;text-decoration:underline;}
+</style></head><body>
+  <table style="background-color: rgb(240, 240, 240);" align="center" width="100%">    
+  <tbody>
+  <tr>                
+    <td>
+    <h2>haneWIN NFS Server<br>Version 1.2</h2><h2>
+    <p style="font-family: Times New Roman,Times,serif; text-align: center;">
+    Copyright 2002-2021, Herbert Hanewinkel, Neuried
+    </p>
+    </h2></td>
+  </tr>
+  </tbody>
+  </table>
+    
+  <blockquote>
+  <div style="text-align: right;">
+    Aktualisiert: f&uuml;r 1.2.58 M&auml;rz 2021
+  </div>
+        
+  <p style="text-align: center;">
+  <a href="#Uebersicht">&Uuml;bersicht</a><br>
+  <a href="#Installation">Installation</a><br>
+  <a href="#Implementierung">Implementierung</a><br>
+  <a href="#Benutzung">Benutzung</a><br>
+  <a href="#Implementierung">Implementierung</a><br>
+  <a href="#Verfuegbarkeit">Verf&uuml;gbarkeit</a>
+  </p>
+        
+  <h3><a name="Uebersicht"></a>&Uuml;bersicht</h3>
+  <p>
+    Die Software implementiert einen <b>NFS Server</b>
+    nach RFC 1813 (NFS 3 Protokoll), RFC 1094 (NFS 2 Protokoll), RFC 2055
+    (WebNFS Protokoll) und NLM nach der XNFS Spezifikation.<br>
+    Ein SunRPC PortMap Daemon nach RFC 1057 ist als unabh&auml;ngiger Dienst
+    realisiert, so dass der NFS Server auch mit einem vorhandenen
+    PortMapper eingesetzt werden kann.
+  </p>
+  <p>
+    Der NFS Server ist als Dienst f&uuml;r Windows XP/Vista/20xx/7/8/10 implementiert.
+    Der NFS Server kann &uuml;ber ein Kontrollfeld der Systemsteuerung &uuml;berwacht werden.
+    <br>
+    Der NFS-Server wird auch als portable Anwendung mit optionalen 
+    integrierten PortMap-Daemon bereitgestellt. 
+  </p>
+  <p>
+    Sowohl Dienst als auch Anwendung sind als 32- und 64-Bit Version
+    implementiert. 
+  </p>
+  <p>
+    Ziel der Implementierung ist nicht eine alternative Vernetzungsm&ouml;glichkeit
+    von Windows-Rechnern, sondern Unix-Systemen mit Standardkonfiguration
+    einen Zugriff auf Festplatten unter Windows zu erlauben. (Auslagerung,
+    Weiterverarbeitung von Daten, die auf dedizierten Unix-Systemen erfasst
+    wurden, u.s.w.). 
+  </p>
+  <p>
+    Da der Server Hardlinks, Softlinks und Ger&auml;te unterst&uuml;tzt,
+    kann er zum Ausf&uuml;hren laufwerkloser Unix-Clients von einem Windows
+    System verwendet werden. 
+  </p>
+  <hr>
+
+  <h3><a name="Installation"></a>Installation</h3>
+      
+  <dl>
+    <dt><b>Voraussetzungen</b></dt>
+    <dd>
+      Computer mit Windows XP/Vista/20xx/7/8/10.
+    <p>
+    </p>
+    </dd>
+        
+    <dt><b>Installation der NFS Servers unter Windows
+        XP/Vista/20xx/7/8/10</b></dt>
+    <dd>
+    <ol>
+      <li>Installieren Sie die Software &uuml;ber das Setup Programm.</li>
+      <li>Legen Sie f&uuml;r den PortMap Daemon und den NFS Server eine
+        Firewallregel an. Ein Beispiel dazu finden Sie in der Datei firewall.bat.
+        Dieses Beispiel erlaubt den Zugriff auf den NFS Server aus dem lokalen
+        Subnetz.</li>
+      <li>&Uuml;ber das Kontrollfeld <b>NFS Server</b> kann der NFS
+        Server Dienst konfiguriert und kontrolliert werden. &Auml;nderungen der
+        Einstellungen im Kontrollfeld k&ouml;nnen nur mit Administratorrechten
+        durchgef&uuml;hrt werden. &Auml;nderungen von NFS Version, Port 
+        und anderen Optionen unter dem Reiter NFS werden erst nach einem Neustart
+        des Server aktiv. Nur wenn das Kontrollfeld mit Administratorrechten 
+        ausgef&uuml;hrt wird und eine Verbindung zum Dienst herstellen kann, 
+        kann der NFS Server Dienst konfiguriert werden.</li>
+      <li>In der Ansicht der exportierten Verzeichnisse k&ouml;nnen &uuml;ber das Kontextmen&uuml;
+        Verzeichnisse hinzugef&uuml;gt, bearbeitet oder gel&ouml;scht werden. Alternativ kann
+        mit dem exports-Editor unter Einstellungen-Verzeichnisse eine <b>exports</b>-Datei (Format wie unter
+        Unix, Anmerkungen dazu im n&auml;chsten Abschnitt) mit den
+        Verzeichnissen, die &uuml;ber NFS zug&auml;nglich gemacht werden sollen, erstellt werden.</li>
+    </ol>
+     <p></p>
+    </dd>
+          
+      <dt><b>Nutzung des NFS Servers als Anwendung</b></dt>
+      <dd>
+      <ol>
+        <li>Extrahieren Sie aus dem zip-Archive den Ordner nfsd, starten Sie im Ordner nfsd
+        die Anwendung f&uuml;r 32 oder 64 Bit.</li>
+       <li>Legen Sie f&uuml;r den NFS Server eine Firewallregel an. Ein Beispiel dazu finden
+       Sie in der Datei firewall.bat. Dieses Beispiel erlaubt den Zugriff auf den NFS Server
+       aus dem lokalen Subnetz.</li>
+
+       <li>In der Ansicht der exportierten Verzeichnisse k&ouml;nnen &uuml;ber das Kontextmen&uuml;
+        Verzeichnisse hinzugef&uuml;gt, bearbeitet oder gel&ouml;scht werden. Alternativ kann
+        mit dem exports-Editor unter Einstellungen-Verzeichnisse eine <b>exports</b>-Datei (Format wie unter
+        Unix, Anmerkungen dazu im n&auml;chsten Abschnitt) mit den
+        Verzeichnissen, die &uuml;ber NFS zug&auml;nglich gemacht werden sollen, erstellt werden.</li>
+      </ol>
+      </dd>
+    </dl>
+    <hr>
+      
+    <h3><a name="Implementierung"></a>Implementierung</h3>
+      
+    <p>
+    NFS erfordert die Nummerierung von Dateien &uuml;ber sogenannte Inodes,
+    wie es bei den Unix-Dateisystemen &uuml;blich ist. Entsprechende Inodes werden in
+    einer Datei <b>inodes.nfs</b>(im NFS-Server Programmverzeichnis)
+    f&uuml;r alle Windows-Dateien erzeugt und verwaltet. Je nach Festplattengr&ouml;&szlig;e
+    kann diese Datei auf mehrere MBytes anwachsen. 
+    </p>
+    <p>
+    Auf NTFS Dateisystemen kann ab Windows 7 die sogenannte "file-id"
+    als Inode verwendet werden. Da diese IDs nur auf einem Dateisystem eindeutig
+    sind, schl&auml;gt der Zugriff auf Unterordner fehl, die als sogenannte reparse-points
+    die Einbindung weiterer Dateisysteme transparent erm&ouml;glichen.
+    Bei Verwendung der "file-id" muss deshalb jedes Dateisystem von einem
+    Client separat "gemountet" werden. Die erfolgt bei "reparse-points"
+    automatisch durch den Server.
+    <br>
+    Auf FAT / FAT32-Volumes, SMB-Volumes oder anderen Laufwerken wird immer
+    die implementierte interne Inode-Tabelle des Servers verwendet.
+    </p>
+    <p>
+    WebNFS bietet eine alternative Zugriffsmethode zum
+    mount Protokoll an. Der Server bietet dazu zwei Startvarianten:
+    <br>
+    - Um ein erstes Dateihandle anzufordern kann ein Client
+    einen Pfad aus der exports-Datei als Mehrkomponentenstartpfad verwenden.
+    <br>
+    - Wenn die Option -public f&uuml;r einen exports Eintrag eingetragen wurde,
+    ist der WebNFS-Zugriff auf diesen Eintrag in der exports-Datei beschr&auml;nkt
+    und der Mehrkomponentenpfad muss das Verzeichnis oder ein Unterverzeichnis
+    des Eintrages sein.
+    </p>
+    <p>
+    Zur Vereinfachung enth&auml;lt der Server keine Benutzerabbildung zwischen Windows
+    Benutzernamen und Unix UIDs und verwendet keine ACL's f&uuml;r die Abbildung der Zugriffsrechte.
+    </p>
+    <p>
+    Der aktuelle Unix-Benutzer wird als Besitzer der Windows-Dateien zur&uuml;ckgegeben.
+    Besitzerzugriffsrechte werden basierend auf den Windows-Attributen
+    <span style="font-style: italic; font-weight: bold;">
+      readonly
+    </span>
+    und 
+    <span style="font-style: italic; font-weight: bold;">
+      hidden
+    </span>
+    gesetzt.
+    <br>
+    Unter Unix ausf&uuml;hrbare Dateien werden vom NFS-Server im Windows Dateisystem
+    durch das
+    <span style="font-style: italic; font-weight: bold;">
+      hidden
+    </span>
+    -Attribut gekennzeichnet. F&uuml;r die Unix-Gruppen- und Weltzugriffsrechte wird eine
+    einstellbare Standardmaske (Voreinstellung: 022) auf die Zugriffsrechte des Besitzers angewendet.
+    Die Maske kann je exportiertem Verzeichnis mit der Option -umask konfiguriert werden.
+    </p>
+    <p>
+    Spezielle Dateien und Eigenschaften, wie Unix-Softlinks und SUID-Bit,
+    werden vom NFS-Server im Windows Dateisystem durch das
+    <span style="font-style: italic; font-weight: bold;">
+      system
+    </span>
+    -Attribut gekennzeichnet. Unter Windows 7 und h&ouml;her kann der
+    Server NTFS hard-links und reparse points verwenden, um hard-links und 
+    symbolische Links f&uuml;r Unix zu implementieren.
+    </p>
+    <p>
+    Auf NTFS-Dateisystemen k&ouml;nnen Dateiattribute und Benutzer-/Gruppenkennung auch gespeichert werden.
+    Dies ist aber komplett unabh&auml;ngig von den Windows Zugriffsberechtigungen.
+    </p>
+    <p>
+    Die <b>exports</b>-Datei folgt dem Unix-Format.
+    Pfadangaben m&uuml;ssen in Windows Notation mit einem
+    Laufwerksbuchstaben oder eine Volume Spezifikation beginnen, z.B.
+    </p>
+    <p>
+     C:\unix
+    <br>
+    \\?\Volume{6ca75309-178c-11e6-b0b3-806e6f6e6963}
+    <br>
+    </p>
+    <p>
+    SMB-Freigaben k&ouml;nnen ebenfalls vom NFS-Server exportiert
+    werden. Diese Verzeichnisse M&Uuml;SSEN die UNC-Pfadangabe in der
+    exports-Datei verwenden, da Laufwerksbuchstaben nur auf
+    Benutzerebene verf&uuml;gbar sind.
+    </p>
+    <p>
+    Es gibt die folgenden Optionen:
+   <table>
+      <tbody>
+      <tr>
+        <td valign="top"><tt>-name:&lt;sharename&gt;</tt></td>
+        <td>weist dem exportierten Pfad einen Namen zu &uuml;ber den ein
+         mount erfolgen kann.</td>
+        </tr>
+              
+      <tr>
+        <td valign="top"><tt>-alldirs</tt></td>
+          <td>erlaubt es den Klienten neben dem Verzeichnis ein beliebiges Unterverzeichnis
+          zu mounten.</td>
+        </tr>
+
+      <tr>
+        <td valign="top"><tt>-hide</tt></td>
+          <td>der exports Eintrag ist nur auf zugelassenen Klienten sichtbar.</td>
+        </tr>
+
+      <tr>
+        <td valign="top"><tt>-i32</tt></td>
+          <td>bei Verwendung der 64 Bit file id wir die Inodenummer auf 32 Bit reduziert.
+          </td>
+        </tr>
+
+      <tr>
+        <td valign="top"><tt>-umask:&lt;mask&gt;</tt></td>
+          <td>legt die Zugriffsmaske f&uuml;r group und world auf dem
+            Dateisystem fest, Voreinstellung 022. Bei Speicherung der
+            Attribute auf NTFS gilt dies nur für unter Windows angelegt Dateien.</td>
+      </tr>
+              
+      <tr>
+        <td valign="top"><tt>-readonly</tt></td>
+        <td>erlaubt nur Lesezugriff</td>
+      </tr>
+              
+      <tr>
+        <td valign="top"><tt>-public</tt></td>
+        <td>Zugriff &uuml;ber WebNFS Protokoll.</td>
+      </tr>
+              
+      <tr>
+        <td valign="top"><tt>-lowercase</tt></td>
+        <td>alle Dateinamen werden auf Kleinbuchstaben umgesetzt.</td>
+      </tr>
+              
+      <tr>
+        <td valign="top"><tt>-exec</tt></td>
+        <td>bei allen Dateien wird das x Bit in den Zugriffsrechten gesetzt.
+         Bei Speicherung der Attribute auf NTFS gilt dies nur für unter Windows 
+         angelegt Dateien.</td>
+      </tr>
+              
+      <tr>                  
+        <td valign="top"><tt>-mapall:&lt;uid&gt;[:&lt;gid&gt;]</tt></td>
+        <td> alle Unix Benutzer und Gruppenkennungen werden
+        auf die angegebene Benutzerkennung &lt;uid&gt; und Gruppenkennung
+        &lt;gid&gt; abgebildet.</td>
+      </tr>
+              
+      <tr>
+        <td valign="top"><tt>-maproot:&lt;uid&gt;[:&lt;gid&gt;]</tt></td>
+        <td>Zugriffe von der privilegierten Unix Benutzerkennung 
+        <b>root</b> werden auf die angegebene Benutzerkennung
+        &amp;ltuid&gt; und Gruppenkennung &lt;gid&gt; abgebildet. Ohne eine
+        eingetragene Abbildung wird die Benutzerkennung <b>root</b>
+        immer auf den Benutzer <b>NOBODY</b> abgebildet.</td>
+      </tr>
+              
+      </tr>
+      <tr>
+        <td valign="top"><tt>-range</tt></td>
+        <td>fasst die angegebenen IP-Adressen als von-bis Adresspaare
+        auf und erlaubt allen Klienten in diesem Bereich Zugang (flexibler als die Unix -net
+        Option).</td>
+      </tr>
+      </tbody>
+    </table>
+    </p>
+
+    <p>
+    Ein Pfadname der Leerzeichen enth&auml;lt muss in Anf&uuml;hrungszeichen gesetzt
+    werden.
+    <br>
+    z.B. c:"\Eigene Dateien" ...
+    </p>
+
+    <p>Ein Verzeichnis kann mehrfach aufgef&uuml;hrt werden und verschiedenen
+    Klienten unterschiedliche Rechte gew&auml;hren.</p>
+
+    <p>Auf Klientseite ist beim mount-Befehl auch f&uuml;r Laufwerke die Unix-Notation
+    zu verwenden:<br>
+    <tt>C: --&gt; /c</tt><br>
+    <tt>D:\nfs --&gt; /d/nfs</tt><br>
+    z.B.: Windows Verzeichnis 
+    <tt><b>D:\nfs</b></tt>
+    unter 
+    <tt><b>/mnt/nfs</b></tt>
+    mounten:<br>
+    <tt>mount -t nfs 192.168.1.4:/d/nfs /mnt/nfs</tt>
+    </p>
+
+    <p>Ein mount von SMB Netzwerklaufwerken erfolgt unter Unix mit der Notation: 
+    <br>    
+    <tt>\\server\share --&gt; //server/share</tt><br>
+    z.B.: Windows Verzeichnis
+    <tt><b>\\amilo\nfs</b></tt>
+     unter 
+    <tt><b>/mnt/nfs</b></tt>
+    mounten:<br>
+    <tt>mount -t nfs 192.168.1.4://amilo/nfs /mnt/nfs</tt>
+    </p>
+
+    <p>
+    Mit der 
+    <b>
+      -name
+    </b>
+     Option kann dem Windowsverzeichnis ein
+    alternativer Name zugewiesen werden.
+    <br>
+    z.B.: Windows Verzeichnis 
+    <tt>
+      <b>
+        D:\EigeneDateien\musik\mp3
+      </b>
+    </tt>
+    wird mit der Option 
+    <b>
+      -name:mp3
+    </b>
+     exportiert.
+    <br>
+    Ein mount kann dann unter Unix statt &uuml;ber
+    <br>
+      
+    <tt>
+      mount -t nfs 192.168.1.4:/d/EigeneDateien/musik/mp3 ...
+    </tt>
+    <br>
+    einfach &uuml;ber
+    <br>
+      
+    <tt>
+      mount -t nfs 192.168.1.4:/mp3 ...
+    </tt>
+    <br>
+    erfolgen. Der Pfad zum Windowsverzeichnis bleibt damit unsichtbar f&uuml;r
+    die Unix-Benutzer.
+    <br>
+    </p>
+    <hr>
+    <h3 align="center">
+      <a name="Benutzung">
+      </a>
+      Benutzung 
+    </h3>
+    Die InfoBox wird nur beim Start des Kontrollfeldes der nicht
+    registrierten Version angezeigt.
+      
+    <h4>
+      Einsatz des Servers als Dienst unter Windows XP/Vista/20xx/7/8/10
+    </h4>
+    PortMap Daemon und NFS Server sind als Dienst implementiert.
+    Die Startmen&uuml;eintr&auml;ge zur Installation und zur Entfernung
+    der Dienste sind Verweise auf die folgenden Befehle:
+      
+    <ol>
+          
+      <li>
+      Der PortMap Daemon wird mit dem Befehl 
+      <br>
+            
+      <tt>
+        <b>
+          PMAPD -install
+        </b>
+      </tt>
+      <br>
+      installiert und wird dann automatisch gestartet.
+      &Uuml;ber das Kontrollfeld Dienste kann der Dienst jederzeit gestoppt und
+      neu gestartet werden. 
+      </li>
+          
+      <li>
+      Der NFS Server Dienst wird mit dem Befehl 
+      <br>
+            
+      <tt>
+        <b>
+          NFSD -install PMAPDaemon
+        </b>
+      </tt>
+      <br>
+      installiert und wird dann automatisch gestartet. Der NFS Server kann
+      nur gestartet werden, wenn ein PortMap Daemon aktiv ist. Mit diesem
+      Befehl wird deshalb &uuml;berpr&uuml;ft ob der Dienst PMAPDaemon aktiv ist. Wenn
+      ein PortMap Daemon eines anderen Herstellers eingesetzt wird, ist der
+      Dienstnamen dieses PortMap Daemons anzugeben. Ohne Angabe eines
+      Dienstnamens wird keine Abh&auml;ngigkeits&uuml;berpr&uuml;fung durchgef&uuml;hrt.
+      &Uuml;ber das Kontrollfeld Dienste kann der Dienst jederzeit gestoppt und
+      neu gestartet werden. 
+      </li>
+          
+      <li>
+      Mit dem Befehl 
+      <br>
+            
+      <tt>
+        <b>
+          PMAPD -remove
+        </b>
+      </tt>
+      <br>
+      bzw. 
+      <br>
+            
+      <tt>
+        <b>
+          NFSD -remove
+        </b>
+      </tt>
+      <br>
+      wird der PortMap Daemon oder der NFS Server Dienst beendet und
+      entfernt. 
+      </li>
+       
+    </ol>   
+      
+    <h4>Das NFS Server Kontrollfeld</h4>
+  <dl>
+    <dt><b>Dienst</b></dt>
+    <dd>Die Eintr&auml;ge erlauben das Starten und Stoppen des Dienstes</dd>
+    <dt><b>Protokoll</b></dt>
+    <dd>Zeigt die Protokolldatei des Servers an.</dd>
+      <dt><b>Einstellungen</b></dt>
+    <dd><br>
+</dd>
+    <dt><b>NFS</b></dt>
+    <dd>
+      <p align="center"><img src="nfs-d.png"></p>
+      <p>Der Betrieb des Servers kann auf TCP oder UDP, in der Version 2
+      und/oder 3 und auch auf alternativen Ports erfolgen.
+      Wird NFS-2 deaktiviert gilt dies auch f&uuml;r mount version1 und NLM version 1.
+      Wird NFS-3 deaktiviert gilt dies auch f&uuml;r mount version 3 und NLM version 4.
+      Wird UDP oder TCP deaktiviert gilt dies auch f&uuml;r das mount und NLM Protokoll.
+      </p>
+      <p>
+      Der NFS Server arbeitet Multithreaded. F&uuml;r TCP Zugriffe werden pro Verbindung zwei Threads erzeugt. Bei UDP Zugriffen wird die vorgegebene Anzahl von
+      Threads zur Bearbeitung der Anfragen gestartet.
+      </p>
+      <p>
+      Die NFS Blockgr&ouml;sse legt die maximale Paketgr&ouml;sse &uuml;ber UDP fest.
+      Bei mehr als 1460 Bytes werden Pakete &uuml;ber Ethernet fragmentiert.
+      Die Fragmente k&ouml;nnen ohne Best&auml;tigung &uuml;bertragen werden,
+      bei einem Fragmentverlust muss allerdings das komplette Paket neu &uuml;bertragen
+      werden.
+      </p>
+      <p>Um die interne Inode-Datenbank zu bereinigen, kann sie beim Serverstart 
+      zur&uuml;ckgesetzt werden. Da in diesem Fall nach einem Neustart des Servers 
+      neue Inode-Nummern vergeben werden, m&uuml;ssen noch angebundene UDP 
+      Klienten erneut mounten.
+      </p> 
+      </dd>
+          
+      <dt><b>Server</b></dt>
+      <dd>
+      <p align="center">
+      <img src="server-d.png">
+      </p>
+      <p>
+      Asynchrones Schreiben bei NFS-2: Der Server
+      wartet mit der Best&auml;tigung NICHT bis die Daten abgespeichert wurden.
+      Dies entspricht NFS-3 mit write Option UNSTABLE.
+      <br>
+      </p>
+      <p>
+      Synchrones Schreiben bei NFS-3: Der Server wartet
+      mit der Best&auml;tigung immer bis die Daten abgespeichert wurden und
+      best&auml;tigt dies mit FILE_SYNC. Dies entspricht dem Verhalten von NFS-2. 
+      </p>
+      <p>
+      Normalerweise wird der Benutzer "root" (uid 0) auf die Zugriffrechte des Benutzers NOBODY gesetzt.
+      Mit der Option Benutzer root auf root abbilden kann dies für alle exportierten Verzeichnisse 
+      abgeschaltet werden. Für ein einzelnes Verzeichnis kann dies mit der Option -maproot:0 f&uuml;r einen
+      Eintrag in der exports Datei ge&auml;ndert werden.
+      </p>
+      <p>
+      Standardrechte bei Dateierstellung ohne Zugriffrechte anlegen:
+      Linux Klienten k&ouml;nnen Dateien ohne jegliche Zugriffrechte anlegen beschreiben.
+      Unter Windows wird die Datei zwar erstellt es ist aber kein
+      Schreibzugriff auf die Datei m&ouml;glich. Mit dieser Option werden in
+      diesem Fall die Standardeinstellungen bei der Dateierstellung verwendet.
+      </p>
+
+       <p>
+      Auf nativen NTFS Dateisystemen kann die sogenannte "file-id" als Inode ab Windows 7
+      verwendet werden. In diesem Fall wird keine Information in der
+      "inodes.nfs" Datei gespeichert.
+      </p>  
+       <p>
+      Auf nativen NTFS Dateisystemen k&oumlnnen die Zugriffsrechte, uid und gid einer Unix Datei
+      gespeichert werden(nur 16-Bit je UID und GID). Damit wird eine fast vollst&auml;ndige
+      Transparenz f&uuml;r die Clients
+      erzeugt, ein Betrieb von diskless clients ist damit problemlos m&ouml;glich. Es sind bis zu
+      10 Namen erlaubt, die sich nur in Gross- und Kleinbuchstaben unterscheiden.
+      Die Speicherung der Attribute erfolgt unter NTFS als
+      "creation-time" nicht in einem "alternative stream", damit muss eine Datei zum Lesen der 
+      Attribute nicht geöffnet werden
+      </p>
+      <p>F&uuml;r ausf&uuml;hrbare Dateien wird das
+      <span style="font-style: italic; font-weight: bold;">hidden</span>
+      -Attribut verwendet. Je nach Windows Einstellung sind die Dateien damit unter
+      Windows nicht sichtbar. Falls dies unerw&uuml;nscht ist, kann mit der Verwendung
+      der Option Execute-Bit immer setzen die Verwendung des
+      <span style="font-style: italic; font-weight: bold;">hidden</span>-Attributes abgeschaltet werden.
+      F&uuml;r einzelne Eintr&auml;ge in der exports-Datei kann alternativ die -exec Option&nbsp; verwendet
+      werden.
+     </p>
+    </dd>
+          
+    <dt><b>Verzeichnisse</b></dt>
+    <dd>
+      <p align="center"><img src="exports-d.png"></p>
+      <p>zeigt die aktuell vom Server exportierten Verzeichnisse aus 
+      Klientensicht an (entspricht dem unix Befehl showmount -e)
+      und erlaubt das direkte bearbeiten der <b>exports</b>-Datei.</p>
+      <p>Exports Eintr&auml;ge sind auf allen Klienten sichtbar.
+      Zur Verbesserung der Sicherheit kann dies auf die erlaubten Klienten
+      eingeschr&auml;nkt werden.</p>
+
+
+    </dd>
+          
+    <dt><b>Anmeldungen</b></dt>
+    <dd>
+      <p align="center"><img src="mounts-d.png"></p>
+      <p>zeigt die derzeit angemeldeten Klienten aus Klientensicht an
+      (entspricht dem unix Befehl showmount).</p>
+            
+      <p>Damit die Anmeldungen von UDP Klienten bei Neustart des Servers erhalten bleiben
+      werden die Eintr&auml;ge in der Datei mounttab gespeichert. Dies kann allerdings dazu f&uuml;hren,
+      dass Klienten, die sich nicht abmelden, selbst nach Beendigung und nach einem Neustart
+      des Servers immer noch als angemeldet angezeigt werden.</p>
+    </dd>
+          
+    <dt><b>Portmapper</b></dt>
+    <dd>
+       <p align="center"><img src="portmap-d.png"></p>
+       <p>zeigt die unter dem SunRPC PortMapper registrieren Programme an.</p>
+    </dd>
+
+    <dt><b>Sprache</b></dt>
+    <dd>
+       <p align="center"><img src="language-d.png"></p>
+       <p>Erlaubt die Auswahl der Sprache der Benutzeroberfl&auml;che. Sprachmodule
+       f&uuml;r alte Versionen k&ouml;nnen weiter verwendet werden, sie k&ouml;nnen
+       allerdings unvollst&auml;ndig sein. Neu Sprachen k&ouml;nnen durch eine entsprechende 
+       Sprachdatei im Unterverzeichnis "languages" hinzugef&uumlgt werden.
+       Neue Sprachdateien k&ouml;nnen am einfachsten
+       durch Kopie einer vorhandenen Sprachdatei und Bearbeitung mit einem Editor
+       erstellt werden.</p>
+    </dd>
+
+  <dt><b>Ansicht</b></dt>
+  <dd>
+    <p>Es kann entweder die Liste der exportierten Verzeichnisse oder der angemeldeten
+    Klienten angezeigt werden. Angemeldete Klienten k&ouml;nnen mit ihrer
+    IP-Adresse oder ihrem Namen angezeigt werden.
+    Wenn das Kontrollfeld mit Administratorrechten gestartet wurde k&ouml;nnen &uuml;ber
+    das Kontextmen&uuml; Verzeichniseintr&auml;ge eingef&uuml;gt, bearbeitet oder
+    entfernt werden.</p>  
+    <img src="edit-d.png"><p></p>
+    <p>Der Server verwendet in der Voreinstellung den Zeichensatz UTF-8.
+    F&uuml;r Linux Klienten ist UTF-8 die beste Wahl. Falls erforderlich kann der
+    Zeichensatz f&uuml;r einen Eitrag auf Windows ANSI umgeschaltet werden.</p>
+    <p>Auch nach dem Entfernen von Eintr&auml;gen aus der Liste der exportierten Ordner
+    k&ouml;nnen bereits verbundene Klienten weiterhin auf den Server basierend auf 
+    entfernten Eintr&auml;gen zugreifen. Neue Klienten k&ouml;nnen sich nur auf Basis 
+    der aktualisierten Liste anmelden.</p>
+    <p>Die Liste der Anmeldungen zeigt Verzeichnis, Verbindungsart und Klient.
+    Mit Administratorrechten kann &uuml;ber das Kontextmen&uuml; eines Eintrages
+    eine Verbindung getrennt werden.</p>
+  </dd>
+
+  <dt><b>Hilfe</b></dt>
+  <dd>startet den HTML-Browser mit der Dokumentation.</dd>
+  
+  <dt><b>Registrieren</b></dt>
+  <dd>&Uuml;ber diesen Dialog wird die Software registriert. Geben Sie bitte
+  dort den Lizenzschl&uuml;ssel und die Lizenzkennung ein. Nach erfolgreicher
+  Registrierung wird unter Hilfe-Info die Lizenzkennung angezeigt.</dd>
+
+  <dt><b>&Uuml;ber...</b></dt>
+  <dd>zeigt Version und Urheberrecht an.</dd>
+  </dl>
+  <hr>
+      
+  <h3><a name="Verfuegbarkeit"></a>Verf&uuml;gbarkeit</h3>
+    Die jeweils aktuelle Version des NFS Servers ist unter 
+    <a href="http://www.hanewin.net">www.hanewin.net</a>
+    zu finden. Bei Fragen, Problemen oder Anregungen verwenden Sie bitte
+    unser <a href="http://www.hanewin.net/contact/cform-d.htm">
+    Kontaktformular</a>.
+<p></p>
+</blockquote>
+</body></html>
