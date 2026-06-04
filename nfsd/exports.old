@@ -14,4 +14,4 @@
 # Use UNC path specification for access to remote drive
 # Hidden volumes without a drive letter can be mounted by volume GUID
 #
-D:\ubuntu16.04\share  -name:share -lowercase -exec -alldirs -public
+D:\ubuntu16.04\github  -name:share -lowercase -exec -alldirs -public  169.254.10.50

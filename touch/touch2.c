@@ -15,7 +15,7 @@
 
 #define PORT 3000 // 对方服务器的端口号
 #define BUF_SIZE 1024
-#define IP "10.11.53.4" // 对方服务器的IP地址
+#define IP "169.254.10.68"   // 对方服务器的IP地址
 
 int main(int argc, char const *argv[])
 {
@@ -90,7 +90,7 @@ int main(int argc, char const *argv[])
         if (evt.type == EV_KEY && evt.code == BTN_TOUCH && evt.value == 1)
         {
             printf("开始录音 \n");
-            int ret = system("arecord -d3 -c1 -r16000 -twav  -fS16_LE ./ai_server/bin/wav/2.wav");
+            int ret = system("arecord -d3 -c1 -r16000 -twav -fS16_LE /mnt/nfs/2.wav");
 
             if (ret == -1)
             {

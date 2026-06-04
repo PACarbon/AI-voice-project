@@ -1,0 +1,192 @@
+2026-05-08 16:26:17 nfsd   Chinese (Simplified)_China.936
+2026-05-08 16:26:17 nfsd   file handle cache size 8
+2026-05-08 16:26:17 nfsd   maximum data size 81920
+2026-05-08 16:26:17 nfsd   client root mapped to root
+2026-05-08 16:26:17 nfsd   file id mode enabled
+2026-05-08 16:26:17 nfsd   save attr on NTFS enabled
+2026-05-08 16:26:17 nfsd   symbolic links enabled 
+2026-05-08 16:26:17 nfsd   NTFS hard links supported
+
+------ Exported file systems ------
+C:\Users\moon\Documents\share -name:share -lowercase -exec -alldirs -public
+-----------------------------------
+
+2026-05-08 16:26:17 pmapd ready on port 111
+2026-05-08 16:26:17 mountd started on 1058
+2026-05-08 16:26:17 nfsd   started on 2049, threads udp 4 tcp 2/c
+2026-05-08 16:26:17 nlmd   started on 4045
+
+------ Exported file systems ------
+D:\ubuntu16.04\share -name:share -lowercase -exec -alldirs -public
+-----------------------------------
+
+2026-05-08 16:29:22 mount3 169.254.10.50 d:\ubuntu16.04\share
+2026-05-15 15:42:18 nfsd   Chinese (Simplified)_China.936
+2026-05-15 15:42:18 nfsd   file handle cache size 8
+2026-05-15 15:42:18 nfsd   maximum data size 81920
+2026-05-15 15:42:18 nfsd   client root mapped to root
+2026-05-15 15:42:18 nfsd   file id mode enabled
+2026-05-15 15:42:18 nfsd   save attr on NTFS enabled
+2026-05-15 15:42:18 nfsd   symbolic links enabled 
+2026-05-15 15:42:18 nfsd   NTFS hard links supported
+
+------ Exported file systems ------
+D:\ubuntu16.04\share -name:share -lowercase -exec -alldirs -public
+-----------------------------------
+
+2026-05-15 15:42:18 pmapd ready on port 111
+2026-05-15 15:42:18 mountd started on 1058
+2026-05-15 15:42:18 nfsd   started on 2049, threads udp 4 tcp 2/c
+2026-05-15 15:42:18 nlmd   started on 4045
+2026-05-15 15:43:04 mount3 169.254.10.50 d:\ubuntu16.04\share
+2026-05-15 15:59:09 mount3 169.254.10.50 d:\ubuntu16.04\share
+2026-05-15 15:59:44 mount3 169.254.10.50 d:\ubuntu16.04\share
+
+------ Exported file systems ------
+D:\ubuntu16.04\github -name:share -lowercase -exec -alldirs -public
+-----------------------------------
+
+2026-05-15 16:02:42 mount3 169.254.10.50 d:\ubuntu16.04\github
+2026-05-25 18:18:40 nfsd   Chinese (Simplified)_China.936
+2026-05-25 18:18:40 nfsd   file handle cache size 8
+2026-05-25 18:18:40 nfsd   maximum data size 81920
+2026-05-25 18:18:40 nfsd   client root mapped to root
+2026-05-25 18:18:40 nfsd   file id mode enabled
+2026-05-25 18:18:40 nfsd   save attr on NTFS enabled
+2026-05-25 18:18:40 nfsd   symbolic links enabled 
+2026-05-25 18:18:40 nfsd   NTFS hard links supported
+
+------ Exported file systems ------
+D:\ubuntu16.04\github -name:share -lowercase -exec -alldirs -public
+-----------------------------------
+
+2026-05-25 18:18:40 pmapd ready on port 111
+2026-05-25 18:18:40 mountd started on 1058
+2026-05-25 18:18:40 nfsd   started on 2049, threads udp 4 tcp 2/c
+2026-05-25 18:18:40 nlmd   started on 4045
+2026-05-27 17:20:58 nfsd   Chinese (Simplified)_China.936
+2026-05-27 17:20:58 nfsd   file handle cache size 8
+2026-05-27 17:20:58 nfsd   maximum data size 81920
+2026-05-27 17:20:58 nfsd   client root mapped to root
+2026-05-27 17:20:58 nfsd   file id mode enabled
+2026-05-27 17:20:58 nfsd   save attr on NTFS enabled
+2026-05-27 17:20:58 nfsd   symbolic links enabled 
+2026-05-27 17:20:58 nfsd   NTFS hard links supported
+
+------ Exported file systems ------
+D:\ubuntu16.04\github -name:share -lowercase -exec -alldirs -public
+-----------------------------------
+
+2026-05-27 17:20:58 pmapd ready on port 111
+2026-05-27 17:20:58 mountd started on 1058
+2026-05-27 17:20:58 nfsd   started on 2049, threads udp 4 tcp 2/c
+2026-05-27 17:20:58 nlmd   started on 4045
+
+------ Exported file systems ------
+D:\ubuntu16.04\github\AI_Server -name:share -lowercase -exec -alldirs -public
+-----------------------------------
+
+
+------ Exported file systems ------
+D:\ubuntu16.04\github\AI_Server -name:share -lowercase -exec -alldirs -public
+-----------------------------------
+
+2026-05-27 17:30:26 mount3 169.254.10.50 d:\ubuntu16.04\github\AI_Server
+
+------ Exported file systems ------
+D:\ubuntu16.04\github\AI_Server -name:share -lowercase -exec -alldirs -public
+-----------------------------------
+
+
+------ Exported file systems ------
+D:\ubuntu16.04\github\AI_Server -name:share -lowercase -exec -alldirs -public  169.254.10.50
+-----------------------------------
+
+
+------ Exported file systems ------
+D:\ubuntu16.04\github -name:share -lowercase -exec -alldirs -public  169.254.10.50
+-----------------------------------
+
+
+------ Exported file systems ------
+D:\ubuntu16.04\github\AI_Server -name:share -lowercase -exec -alldirs -public  169.254.10.50
+-----------------------------------
+
+2026-05-27 21:25:57 nfsd   Chinese (Simplified)_China.936
+2026-05-27 21:25:57 nfsd   file handle cache size 8
+2026-05-27 21:25:57 nfsd   maximum data size 81920
+2026-05-27 21:25:57 nfsd   client root mapped to root
+2026-05-27 21:25:57 nfsd   file id mode enabled
+2026-05-27 21:25:57 nfsd   save attr on NTFS enabled
+2026-05-27 21:25:57 nfsd   symbolic links enabled 
+2026-05-27 21:25:57 nfsd   NTFS hard links supported
+
+------ Exported file systems ------
+D:\ubuntu16.04\github\AI_Server -name:share -lowercase -exec -alldirs -public  169.254.10.50
+-----------------------------------
+
+2026-05-27 21:25:57 pmapd ready on port 111
+2026-05-27 21:25:57 mountd started on 1058
+2026-05-27 21:25:57 nfsd   started on 2049, threads udp 4 tcp 2/c
+2026-05-27 21:25:57 nlmd   started on 4045
+2026-05-27 21:29:00 mount3 169.254.10.50 d:\ubuntu16.04\github\AI_Server
+2026-05-28 12:18:36 nfsd   Chinese (Simplified)_China.936
+2026-05-28 12:18:36 nfsd   file handle cache size 8
+2026-05-28 12:18:36 nfsd   maximum data size 81920
+2026-05-28 12:18:36 nfsd   client root mapped to root
+2026-05-28 12:18:36 nfsd   file id mode enabled
+2026-05-28 12:18:36 nfsd   save attr on NTFS enabled
+2026-05-28 12:18:36 nfsd   symbolic links enabled 
+2026-05-28 12:18:36 nfsd   NTFS hard links supported
+
+------ Exported file systems ------
+D:\ubuntu16.04\github\AI_Server -name:share -lowercase -exec -alldirs -public  169.254.10.50
+-----------------------------------
+
+2026-05-28 12:18:36 pmapd ready on port 111
+2026-05-28 12:18:36 mountd started on 1058
+2026-05-28 12:18:36 nfsd   started on 2049, threads udp 4 tcp 2/c
+2026-05-28 12:18:36 nlmd   started on 4045
+2026-05-28 12:19:50 mount3 169.254.10.50 d:\ubuntu16.04\github\AI_Server
+2026-05-28 12:45:13 mount3 169.254.10.50 d:\ubuntu16.04\github\AI_Server
+2026-05-28 13:02:40 mount3 169.254.10.50 d:\ubuntu16.04\github\AI_Server
+2026-05-28 13:30:59 mount3 169.254.10.50 d:\ubuntu16.04\github\AI_Server
+2026-05-29 12:33:46 nfsd   Chinese (Simplified)_China.936
+2026-05-29 12:33:46 nfsd   file handle cache size 8
+2026-05-29 12:33:46 nfsd   maximum data size 81920
+2026-05-29 12:33:46 nfsd   client root mapped to root
+2026-05-29 12:33:46 nfsd   file id mode enabled
+2026-05-29 12:33:46 nfsd   save attr on NTFS enabled
+2026-05-29 12:33:46 nfsd   symbolic links enabled 
+2026-05-29 12:33:46 nfsd   NTFS hard links supported
+
+------ Exported file systems ------
+D:\ubuntu16.04\github\AI_Server -name:share -lowercase -exec -alldirs -public  169.254.10.50
+-----------------------------------
+
+2026-05-29 12:33:46 pmapd ready on port 111
+2026-05-29 12:33:46 mountd started on 1058
+2026-05-29 12:33:46 nfsd   started on 2049, threads udp 4 tcp 2/c
+2026-05-29 12:33:46 nlmd   started on 4045
+2026-05-29 12:33:47 mount3 169.254.10.50 d:\ubuntu16.04\github\AI_Server
+2026-05-29 14:00:38 nfsd   Chinese (Simplified)_China.936
+2026-05-29 14:00:38 nfsd   file handle cache size 8
+2026-05-29 14:00:38 nfsd   maximum data size 81920
+2026-05-29 14:00:38 nfsd   client root mapped to root
+2026-05-29 14:00:38 nfsd   file id mode enabled
+2026-05-29 14:00:38 nfsd   save attr on NTFS enabled
+2026-05-29 14:00:38 nfsd   symbolic links enabled 
+2026-05-29 14:00:38 nfsd   NTFS hard links supported
+
+------ Exported file systems ------
+D:\ubuntu16.04\github\AI_Server -name:share -lowercase -exec -alldirs -public  169.254.10.50
+-----------------------------------
+
+2026-05-29 14:00:38 pmapd ready on port 111
+2026-05-29 14:00:38 mountd started on 1058
+2026-05-29 14:00:38 nfsd   started on 2049, threads udp 4 tcp 2/c
+2026-05-29 14:00:38 nlmd   started on 4045
+2026-05-29 14:00:47 mount3 169.254.10.50 d:\ubuntu16.04\github\AI_Server
+2026-05-29 14:07:43 mount3 169.254.10.50 d:\ubuntu16.04\github\AI_Server
+2026-05-29 14:14:09 mount3 169.254.10.50 d:\ubuntu16.04\github\AI_Server
+2026-05-29 15:16:30 mount3 169.254.10.50 d:\ubuntu16.04\github\AI_Server

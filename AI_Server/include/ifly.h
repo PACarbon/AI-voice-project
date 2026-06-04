@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <errno.h>
+#include <string.h>
 
 #include "qisr.h"
 #include "qtts.h"
@@ -16,12 +17,13 @@
 #define FRAME_LEN	640 
 #define HINTS_SIZE  100
 
-int login_ifly();
+extern char g_rec_result[];
 
-void myiat(char * rec_result);
+int login();
 
-void mytts(const char *text);
+void my_iat();
 
-void log_out();
+void my_tts(const char *text);
+
 
 #endif
